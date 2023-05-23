@@ -44,7 +44,7 @@ $(document).ready(function () {
             formData.push({name: 'id', value: id});
         }
 
-        const finalUrl = choice ? "http://172.17.100.12:8081/bejerano/IPT-Finals/cgi-bin/get.o" : "http://172.17.100.12:8081/bejerano/IPT-Finals/cgi-bin/delete.o";
+        const finalUrl = choice ? "http://172.17.100.12:8081/bejerano/IPT-Finals/get.o" : "http://172.17.100.12:8081/bejerano/IPT-Finals/delete.o";
 
         // send AJAX request
         $.ajax({
@@ -82,7 +82,7 @@ $(document).ready(function () {
         if(!choice){
             formData.push({name: 'id', value: id});
         }
-        const finalUrl = choice ? "http://172.17.100.12:8081/bejerano/IPT-Finals/cgi-bin/post.o" : "http://172.17.100.12:8081/bejerano/IPT-Finals/cgi-bin/update.o";
+        const finalUrl = choice ? "http://172.17.100.12:8081/bejerano/IPT-Finals/post.o" : "http://172.17.100.12:8081/bejerano/IPT-Finals/update.o";
 
         // send AJAX request
         $.ajax({
