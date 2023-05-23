@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #8600b3;
+/*    --primary-color: #04D5DA;*/
+/*    --primary-color: #48C905;*/
+/*    --secondary-color: #7DFB3C;*/
+    --secondary-color: #CE43FB;
+    --background: #ddd;
+    --container-color: #fff;
+    --text-color: #777A7A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    font-size: 23px;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.header h1 {
+    text-align: center;
+    font-family: 'Montserrat';
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.1rem;
+    user-select: none;
+}
+
+.container {
+    background-color: var(--container-color);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+    position: relative;
+    width: 40%;
+    margin: 50px 0 0 30%;
+    border-radius: 20px;
+    padding: 20px 0 20px 0;
+    transition: all 0.5s ease;
+}
+
+.form h2 {
+    text-align: center;
+    font-family: 'Montserrat';
+    transition: all 0.5s ease;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.form h2:hover {
+    transform: translateY(-5px);
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.form .row {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form .field {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 2) - 10px);
+    transition: all 0.5s ease;
+}
+
+.form label {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.5s ease;
+    user-select: none;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ddd;
+    transition: all 0.5s ease;
+    color: var(--text-color);
+}
+
+.form input:focus,
+.form select:focus,
+.search-box input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.form .row.btn {
+    justify-content: center;
+}
+
+.form button {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    padding: 10px 60px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form button:hover, .search-box button:hover {
+    font-weight: 900;
+    background-color: #fff;
+    color: var(--primary-color);
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.form .arrow {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--primary-color);
+    padding: 5px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form .arrow:hover {
+    box-shadow: 0 0 15px var(--primary-color);
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+/* Bottom Container ~ Student Data */
+
+.list {
+    width: 90%;
+    margin: 50px 0 0 5%;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s ease;
+}
+
+/* Search Box */
+
+.search-box {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box input {
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.search-box button {
+    margin-left: 10px;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Table Section */
+
+.list .thead {
+    background-color: var(--primary-color);
+}
+
+.list .tbody:nth-last-child(1) {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.list .tr .th:nth-child(1),
+.list .tr .th:nth-child(5),
+.list .tr .th:nth-child(8),
+.list .tr .th:nth-child(10),
+.list .tr .td:nth-child(1),
+.list .tr .td:nth-child(5),
+.list .tr .td:nth-child(8),
+.list .tr .td:nth-child(10){
+    flex: 1;
+}
+
+.list .tr .th:nth-child(6),
+.list .tr .th:nth-child(3),
+.list .tr .th:nth-child(7),
+.list .tr .th:nth-child(9),
+.list .tr .td:nth-child(3),
+.list .tr .td:nth-child(7),
+.list .tr .td:nth-child(6),
+.list .tr .td:nth-child(9) {
+    flex: 2;
+}
+
+.list .tr .th:nth-child(n+2):nth-child(-n+3),
+.list .tr .td:nth-child(n+2):nth-child(-n+3) {
+    flex: 4;
+}
+
+.list .tbody .tr:nth-child(even) {
+    background-color: #FBFBFB;
+}
+
+.list .tbody .td.option {
+    padding: 5px;
+}
+
+.list .tbody .td button {
+    padding: 5px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: 'Montserrat';
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.list .tbody .td button:hover {
+    letter-spacing: 0.1rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    font-weight: 800;
+}
+
+.list .table input {
+    cursor: pointer;
+}
+
+.list .tbody .tr {
+    align-items: center;
+    cursor: pointer;
+}
+
+.list .tbody .tr:hover {
+    background: #ddd;
+}
+
+.list .tr {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.list .th {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.list .td {
+    font-size: 15px;
+}
+
+.list .th,
+.list .td {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 11%;
+}
+
+@media (max-width: 1516px) {
+    .list .th,
+    .list .td {
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    .form label {
+        font-size: 16px;
+    }
+    
+    .form input,
+    .form select {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .form button {
+        font-size: 16px;
+        padding: 7px 50px;
+    }
+    
+    .form h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1164px) {
+    .list .th,
+    .list .td {
+        font-size: 12px;
+        padding: 3px;
+    }
+    
+    .form label {
+        font-size: 14px;
+    }
+    
+    .form input,
+    .form select {
+        font-size: 12px;
+        padding: 4px;
+    }
+    
+    .form button {
+        font-size: 14px;
+        padding: 5px 40px;
+    }
+    
+    .form h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 998px) {
+    .list .th,
+    .list .td {
+        font-size: 10px;
+        padding: 1px;
+    }
+    
+    .form label {
+        font-size: 14px;
+    }
+    
+    .form input,
+    .form select {
+        font-size: 12px;
+        padding: 2px;
+    }
+    
+    .form button {
+        font-size: 12px;
+        padding: 3px 30px;
+    }
+    
+    .form h2 {
+        font-size: 16px;
+    }
+}
