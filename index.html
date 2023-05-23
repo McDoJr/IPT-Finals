@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <title>University Enrollment</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>ENROLLMENT FORM</h1>
+    </div>
+
+    <div class="container form">
+        <h2>Registration Form</h2>
+        <form id="form">
+            <div class="row">
+                <div class="field">
+                    <label>Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name">
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    <label>Contact Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Contact Number">
+                </div>
+                <div class="field">
+                    <label>Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter Age">
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    <label>Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="" hidden>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Municipality</label>
+                    <select name="municipality" id="municipality">
+                        <option value="" hidden>Select Municipality</option>
+                        <option value="Tubay">Tubay</option>
+                        <option value="Cabadbaran">Cabadbaran</option>
+                        <option value="Ampayon">Ampayon</option>
+                        <option value="Butuan">Butuan</option>
+                        <option value="Buenavista">Buenavista</option>
+                        <option value="Nasipit">Nasipit</option>
+                        <option value="Carmen">Carmen</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    <label>Year</label>
+                    <select name="year" id="year">
+                        <option value="" hidden>Select Year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Course</label>
+                    <select name="course" id="course">
+                        <option value="" hidden>Select Course</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BSHM">BSHM</option>
+                        <option value="BSCS">BSCS</option>
+                        <option value="BSCE">BSCE</option>
+                        <option value="BSN">BSN</option>
+                        <option value="BSA">BSA</option>
+                        <option value="BSBE">BSBE</option>
+                        <option value="BSBA">BSBA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row btn">
+                <button type="submit" id="register">SUBMIT</button>
+                <button type="submit" id="update">UPDATE</button>
+            </div>
+        </form>
+        <i class="arrow fa-solid fa-caret-up fa-xl"></i>
+    </div>
+
+    <div class="container list">
+        <div class="search-box">
+            <input type="text" id="id" name="id" placeholder="Student ID">
+            <button id="search">SEARCH</button>
+        </div>
+        <div class="table">
+            <div class="thead">
+                <div class="tr">
+                    <div class="th">ID</div>
+                    <div class="th">Fullname</div>
+                    <div class="th">Email</div>
+                    <div class="th">Phone</div>
+                    <div class="th">Age</div>
+                    <div class="th">Gender</div>
+                    <div class="th">Municipality</div>
+                    <div class="th">Year</div>
+                    <div class="th">Course</div>
+                    <div class="th">Option</div>
+                </div>
+            </div>
+            <div class="tbody" id="tbody">
+
+            </div>
+        </div>
+    </div>
+
+    <script id="listitems" type="text/x-handlebars-template">
+
+        {{#each data}}
+            <div class="tr">
+                <div class="td id">{{id}}</div>
+                <div class="td fullname">{{fullname}}</div>
+                <div class="td email">{{email}}</div>
+                <div class="td phone">{{phone}}</div>
+                <div class="td age">{{age}}</div>
+                <div class="td gender">{{gender}}</div>
+                <div class="td municipality">{{municipality}}</div>
+                <div class="td year">{{year}}</div>
+                <div class="td course">{{course}}</div>
+                <div class="td option">
+                    <button id="delete">DELETE</button>
+                </div>
+            </div>
+        {{/each}}
+
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
